@@ -3,34 +3,40 @@
 }
 a:hover {
 	color: #20b565;
+	font-weight: 500;
 }
 a {
-	color: #343a40;
+	color: #3c69ad;
 	text-decoration: none;
 }
+
 .blur {
 	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(10px);
 }
 .bg-menu {
-	background-color: #efeee5;
+	background: radial-gradient(
+		55.8% 134.7% at 71.7% 44.2%,
+		rgba(209, 227, 255, 0.890625) 0%,
+		rgba(150, 191, 255, 0.17) 57.24%
+	);
 }
 
 .btn-primary {
-	background-color: #70b44e;
+	background-color: #3c69ad;
 	color: #ffffff;
 	border: none;
 }
 .btn-primary:hover {
-	background-color: #335d1e;
+	background-color: #30548a;
 }
 
 .btn-outline-primary {
-	border-color: #70b44e;
-	color: #70b44e;
+	border-color: #3c69ad;
+	color: #30548a;
 }
 .btn-outline-primary:hover {
-	background-color: #335d1e;
+	background-color: #30548a;
 	border: none;
 }
 /* rounded corner */
@@ -38,7 +44,7 @@ a {
 	border-radius: 34px 34px 0px 0px !important;
 }
 span {
-	color: #70b44e;
+	color: #3c69ad;
 }
 
 h1,
@@ -49,15 +55,15 @@ h5,
 h6,
 p,
 lead {
-	color: #213f12;
+	color: #0c1523;
 }
 .semibold {
 	font-weight: 600;
 }
 
 .accordion-button:not(.collapsed) {
-	color: #335d1e;
-	background-color: #f6fff2;
+	color: #0c1523;
+	background-color: #c4d2e6;
 }
 .accordion-button:focus {
 	border: none;
