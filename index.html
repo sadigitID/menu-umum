@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -68,9 +69,15 @@
                         <img src="assets/hero.webp" class="d-block img-fluid" alt="menu digital restoran"
                             loading="lazy">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 ">
                         <span>Resto Link Tool</span>
-                        <h1 class="display-5 fw-bold lh-1 mb-3">#Jagonya QR Code Restoran</h1>
+                        <h1 class="display-5 fw-bold lh-1 mb-3 ">#Pake Jualan <p class="home-text animate-text">
+                                <span>Pakaian Bisa</span>
+                                <span>Makanan Bisa</span>
+                                <span>Produk Bisa</span>
+                                <span>Serba Bisa</span>
+                            </p>
+                        </h1>
                         <p class="lead">Tingkatkan pendapatan restoran kamu dengan pelayanan terbaik menggunakan
                             <span>daftarmenu.com</span>, Coba dan buat menu kamu menjadi QR Code secara
                             gratis.</p>
@@ -255,9 +262,9 @@
                             class="d-inline-block align-middle mb-2" loading="lazy">
                         <!-- always visible on any screen -->
                         <p class="my-2 text-dark" style="line-height: 2rem;">
-                            Daftarmenu merupakan sebuah website yang berguna untuk menyimpan link menu
-                            makanan restoran,
-                            yang memudahkan restoran dalam membagikan list menu untuk pembeli hanya dengan 1 link.
+                            Daftarmenu merupakan sebuah website yang berguna untuk menyimpan link produk kamu, sehingga
+                            pembeli tinggal akses 1 link saja untuk melakukan transaksi atau booking terhadap produk
+                            kamu melalui Whatsapp.
                         </p>
                     </div>
                     <div class="col-1"></div>
@@ -345,6 +352,37 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Script text berjalan -->
+    <script>
+        const txts = document.querySelector(".animate-text").children,
+            txtsLen = txts.length;
+        let index = 0;
+        const textInTimer = 3000,
+            textOutTimer = 2800;
+
+        function animateText() {
+            for (let i = 0; i < txtsLen; i++) {
+                txts[i].classList.remove("text-in", "text-out");
+            }
+            txts[index].classList.add("text-in");
+
+            setTimeout(function () {
+                txts[index].classList.add("text-out");
+            }, textOutTimer)
+
+            setTimeout(function () {
+
+                if (index == txtsLen - 1) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+                animateText();
+            }, textInTimer);
+        }
+
+        window.onload = animateText;
+    </script>
 </body>
 
 </html>

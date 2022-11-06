@@ -63,8 +63,54 @@ lead {
 
 .accordion-button:not(.collapsed) {
 	color: #0c1523;
-	background-color: #c4d2e6;
+	background-color: #d1e3ff;
 }
 .accordion-button:focus {
 	border: none;
+}
+.home-text {
+	position: relative;
+	z-index: 2;
+}
+
+.home-text h1 {
+	color: #ffffff;
+	font-size: 50px;
+	color: #ffffff;
+	line-height: 56px;
+	font-weight: 700;
+	margin: 0 0 20px;
+}
+.home-text {
+	margin: 0;
+	overflow: hidden;
+}
+.home-text span {
+	display: inline-block;
+
+	display: none;
+}
+
+.home-text span.text-in {
+	display: block;
+	animation: textIn .5s ease;
+}
+.home-text span.text-out {
+	animation: textOut .5s ease;
+}
+@keyframes textIn {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
 }
